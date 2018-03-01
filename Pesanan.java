@@ -1,13 +1,13 @@
 
  /**
- * Class Pesanan
+ * Class Pesanan Tugas Case Study Prak OOP
  *
  * @author Rizky Ramadian Wijaya
- * @version Alpha.1
+ * @version 1/3/2018
  */
 public class Pesanan
 {
-    // instance variables - replace the example below with your own
+    //Bagian disini menunjukan Variabel-variabel pada class
     private double biaya;
     private Customer pelanggan;
     private String nama_pelanggan;
@@ -15,35 +15,103 @@ public class Pesanan
     private boolean isDiproses;
     private boolean isSelesai;
 
+    //Method Constructor dari Class
     /**
-     * Constructor for objects of class Pesanan
+     * Ini merupakan Constructor dari Class Pesanan
+     * 
+     * @param biaya merupakan parameter untuk menentukan harga pesanan
+     * @param pelanggan merupakan parameter yang akan menunjukan pelanggan yang memesan
      */
-    public Pesanan()
+    public Pesanan(double biaya, Customer pelanggan)
     {
+        this.biaya = biaya;
+        this.pelanggan = pelanggan;
     }
+    
+    //Methode Getter (Accessor) untuk class
+     /**
+     * Ini merupakan Methode untuk mendapatkan biaya dari objek class pesanan
+     * 
+     * @return biaya mendapatkan biaya bayar dari pesanan
+     */
     public double getBiaya()
     {
-        return 0;
+        return biaya;
     }
+    
+     /**
+     * Ini merupakan Methode untuk mendapatkan pelanggan dari objek class pesanan
+     * 
+     * @return pelanggan mengembalikkan variabel pelanggan objek class pesanan
+     */
     public Customer getPelanggan(){
-        return null;
+        return pelanggan;
     }
+    
+    /**
+     * Ini merupakan Methode untuk mendapatkan status diproses dari objek class pesanan
+     * 
+     * @return isDiproses mengembalikkan variabel isDiproses objek class pesanan
+     */
     public boolean getStatusDiproses(){
-        return false;
+        return isDiproses;
     }
+    
+    /**
+     * Ini merupakan Methode untuk mendapatkan status proses selesai dari objek class pesanan
+     * 
+     * @return isSelesai mengembalikkan variabel isSelesai objek class pesanan
+     */
     public boolean getStatusSelesai(){
-        return false;
+        return isSelesai;
     }
+    
+    //Methode Setter (Mutator) untuk class
+    /**
+     * Ini merupakan Methode mutator untuk set nilai biaya
+     * 
+     * @param biaya merupakan variabel yang akan di masukkan pada variable biaya pada Class
+     */
     public void setBiaya(double biaya)
     {
+        this.biaya=biaya;
     }
+    
+    /**
+     * Ini merupakan Methode mutator untuk set nilai pelanggan
+     * 
+     * @param baru merupakan variabel yang akan di masukkan pada variable peanggan pada Class
+     */
     public void setPelanggan(Customer baru)
     {
+        pelanggan=baru;
     }
+    
+    /**
+     * Ini merupakan Methode mutator untuk set nilai isDiproses
+     * 
+     * @param diproses merupakan variabel yang akan di masukkan pada variable isDiproses pada Class
+     */
     public void setStatusDiproses(boolean diproses)
     {
+        isDiproses = diproses;
     }
+    
+    /**
+     * Ini merupakan Methode mutator untuk set nilai isSelesai
+     * 
+     * @param diproses merupakan variabel yang akan di masukkan pada variable isSelesai pada Class
+     */
     public void setStatusSelesai(boolean diproses)
+    {
+        isSelesai = diproses;
+    }
+    
+    //Methode print semua data
+    /**
+     * Merupakan Metod yang akan digunakan untuk mengprint data.
+     */
+    public void printData()
     {
     }
 }

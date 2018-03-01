@@ -1,14 +1,22 @@
 #BlueJ class context
 comment0.target=Customer
-comment0.text=\r\n\ Class\ Customer\r\n\r\n\ @author\ Rizky\ Ramadian\ Wijaya\r\n\ @version\ Alpha.1\r\n
+comment0.text=\r\n\ Class\ Customer\ Tugas\ Case\ Study\ Prak\ OOP\r\n\r\n\ @author\ Rizky\ Ramadian\ Wijaya\r\n\ @version\ 1/3/2018\r\n
 comment1.params=id\ nama
 comment1.target=Customer(int,\ java.lang.String)
+comment1.text=\r\n\ Ini\ merupakan\ Constructor\ dari\ Class\ Customer\r\n\ \r\n\ @param\ id\ merupakan\ parameter\ untuk\ menentukan\ id\ tiap\ customer\r\n\ @param\ id\ merupakan\ penentuan\ nama\ untuk\ Customer\r\n
 comment2.params=
 comment2.target=int\ getID()
+comment2.text=\r\n\ Ini\ merupakan\ Methode\ untuk\ mendapatkan\ ID\ dari\ objek\r\n\ \r\n\ @return\ id\ merupakan\ id\ yang\ di\ dapatkan\r\n
 comment3.params=
 comment3.target=java.lang.String\ getNama()
+comment3.text=\r\n\ Ini\ merupakan\ Methode\ untuk\ mendapatkan\ nama\ dari\ objek\r\n\ \r\n\ @return\ nama\ merupakan\ nama\ yang\ di\ dapatkan\r\n
 comment4.params=id
 comment4.target=void\ setID(int)
+comment4.text=\r\n\ Ini\ merupakan\ Methode\ mutator\ untuk\ set\ nilai\ id\r\n\ \r\n\ @param\ id\ merupakan\ id\ yang\ dimasukkan\r\n
 comment5.params=nama
 comment5.target=void\ setNama(java.lang.String)
-numComments=6
+comment5.text=\r\n\ Ini\ merupakan\ Methode\ mutator\ untuk\ set\ nama\r\n\ \r\n\ @param\ nama\ merupakan\ nama\ Customer\ yang\ dimasukkan\r\n
+comment6.params=
+comment6.target=void\ printData()
+comment6.text=\r\n\ Merupakan\ Metod\ yang\ akan\ digunakan\ untuk\ mengprint\ data.\r\n
+numComments=7

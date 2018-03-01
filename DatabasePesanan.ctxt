@@ -1,14 +1,19 @@
 #BlueJ class context
 comment0.target=DatabasePesanan
-comment0.text=\r\n\ Class\ Database\ Pesanan\r\n\r\n\ @author\ Rizky\ Ramadian\ Wijaya\r\n\ @version\ Alpha.1\r\n
+comment0.text=\r\n\ Class\ Database\ Pesanan\ Tugas\ OOP\ Praktikum\ Case\ Study\r\n\r\n\ @author\ Rizky\ Ramadian\ Wijaya\r\n\ @version\ 1/3/2018\r\n
 comment1.params=baru
 comment1.target=boolean\ addPesanan(Pesanan)
+comment1.text=\r\n\ Merupakan\ metode\ yang\ akan\ digunakan\ pada\ link\ database\r\n\ dengan\ Pesanan\ untuk\ menambah\ Pesanan\ kepada\ database\r\n
 comment2.params=pesan
 comment2.target=boolean\ removePesanan(Pesanan)
+comment2.text=\r\n\ Merupakan\ metode\ yang\ akan\ digunakan\ pada\ link\ database\r\n\ dengan\ Pesanan\ untuk\ menghapus\ Pesanan\ kepada\ database\r\n
 comment3.params=cust
 comment3.target=Pesanan\ getPesanan(Customer)
+comment3.text=\r\n\ Merupakan\ metode\ yang\ akan\ digunakan\ pada\ link\ database\r\n\ dengan\ Pesanan\ untuk\ mendapatkan\ pesanan\ bergantung\ oada\ customer\r\n
 comment4.params=
 comment4.target=java.lang.String[]\ getPesananDatabase()
+comment4.text=\r\n\ Merupakan\ metode\ yang\ akan\ digunakan\ pada\ link\ database\r\n\ dengan\ Pesanan\ untuk\ mendapatkan\ database\ pesanan\r\n
 comment5.params=pesan
 comment5.target=void\ pesananDibatalkan(Pesanan)
+comment5.text=\r\n\ Merupakan\ metode\ yang\ akan\ digunakan\ pada\ link\ database\r\n\ dengan\ Pesanan\ untuk\ meembatalkan\ pesanan\ yang\ ada\ pada\ database\r\n
 numComments=6

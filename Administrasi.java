@@ -1,9 +1,9 @@
 
 /**
- * Write a description of class Administrasi here.
+ * Class Administrasi dan fungsi method yang penting
  *
- * @author (your name)
- * @version (a version number or a date)
+ * @author Rizky Ramadian Wijaya
+ * @version 8/3/2018
  */
 public class Administrasi
 {

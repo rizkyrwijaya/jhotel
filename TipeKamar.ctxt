@@ -1,0 +1,10 @@
+#BlueJ class context
+comment0.target=TipeKamar
+comment0.text=\r\n\ Enumeration\ class\ TipeKamar\ -\ Membatasi\ tipe\ kamar\r\n\r\n\ @author\ Rizky\ Ramadian\ Wijaya\r\n\ @version\ 3/8/2018\r\n
+comment1.params=type
+comment1.target=TipeKamar(java.lang.String)
+comment1.text=\r\n\ Constructor\ TipeKamar\r\n\ \r\n\ @param\ type\ merupakan\ tipe\ kamar\ dalam\ string\r\n
+comment2.params=
+comment2.target=java.lang.String\ toString()
+comment2.text=\r\n\ toString()\ -\ Method\ pengambilan\ String\r\n\ \r\n\ @return\ type\ mengembalikkan\ tipe\ kamar\ sebagai\ string\r\n
+numComments=3

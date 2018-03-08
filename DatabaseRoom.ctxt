@@ -1,0 +1,13 @@
+#BlueJ class context
+comment0.target=DatabaseRoom
+comment0.text=\r\n\ Class\ DatabaseRoom\ untuk\ Case\ Study\ Praktikum\ OOP\ \r\n\r\n\ @author\ Rizky\ Ramadian\ Wijaya\r\n\ @version\ 7/3/2018\r\n
+comment1.params=baru
+comment1.target=boolean\ addRoom(Customer)
+comment1.text=\r\n\ Merupakan\ metode\ yang\ akan\ digunakan\ pada\ link\ database\r\n\ dengan\ Room\ untuk\ menambah\ Rooom\ kepada\ database\r\n
+comment2.params=id
+comment2.target=boolean\ removeRoom(int)
+comment2.text=\r\n\ Merupakan\ metode\ yang\ akan\ digunakan\ pada\ link\ database\r\n\ dengan\ Room\ untuk\ menghapus\ Room\ kepada\ database\r\n
+comment3.params=
+comment3.target=java.lang.String[]\ getRoomDatabase()
+comment3.text=\r\n\ Merupakan\ metode\ yang\ akan\ digunakan\ pada\ link\ database\r\n\ dengan\ Room\ untuk\ mendapatkan\ database\ Room\r\n
+numComments=4

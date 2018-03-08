@@ -89,6 +89,7 @@ public class Lokasi
      * Merupakan Metod yang akan digunakan untuk mengprint data.
      */
     public void printData(){
+        System.out.println(deskripsiLokasi);
     }
     
 }

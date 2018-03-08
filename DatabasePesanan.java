@@ -7,14 +7,14 @@
 public class DatabasePesanan
 {
     //Bagian disini menunjukan Variabel-variabel pada class
-    private String[] list_pesanan;
+    private static String[] list_pesanan;
     
     //Metode pada Database yang akan diperbaiki nanti
     /**
      * Merupakan metode yang akan digunakan pada link database
      * dengan Pesanan untuk menambah Pesanan kepada database
      */
-    public boolean addPesanan(Pesanan baru)
+    public static boolean addPesanan(Pesanan baru)
     {
         return false;
     }
@@ -23,7 +23,7 @@ public class DatabasePesanan
      * Merupakan metode yang akan digunakan pada link database
      * dengan Pesanan untuk menghapus Pesanan kepada database
      */
-    public boolean removePesanan(Pesanan pesan)
+    public static boolean removePesanan(Pesanan pesan)
     {
         return false;
     }
@@ -32,7 +32,7 @@ public class DatabasePesanan
      * Merupakan metode yang akan digunakan pada link database
      * dengan Pesanan untuk mendapatkan pesanan bergantung oada customer
      */
-    public Pesanan getPesanan(Customer cust)
+    public static Pesanan getPesanan(Customer cust)
     {
         return null;
     }
@@ -41,7 +41,7 @@ public class DatabasePesanan
      * Merupakan metode yang akan digunakan pada link database
      * dengan Pesanan untuk mendapatkan database pesanan
      */
-    public String[] getPesananDatabase()
+    public static String[] getPesananDatabase()
     {
         return null;
     }
@@ -50,7 +50,7 @@ public class DatabasePesanan
      * Merupakan metode yang akan digunakan pada link database
      * dengan Pesanan untuk meembatalkan pesanan yang ada pada database
      */
-    public void pesananDibatalkan(Pesanan pesan)
+    public static void pesananDibatalkan(Pesanan pesan)
     {
     }
 }

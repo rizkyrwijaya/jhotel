@@ -14,6 +14,7 @@ public class Pesanan
     private String jenis_kamar;
     private boolean isDiproses;
     private boolean isSelesai;
+    private Room kamar;
 
     //Method Constructor dari Class
     /**
@@ -66,6 +67,15 @@ public class Pesanan
         return isSelesai;
     }
     
+    /**
+     * Ini merupakan Methode untuk mendapatkan object room dari object ini
+     * 
+     * @return kamar merupakan kamar yang akan dikembalikkan
+     */
+    public Room getRoom(){
+        return kamar;
+    }
+    
     //Methode Setter (Mutator) untuk class
     /**
      * Ini merupakan Methode mutator untuk set nilai biaya
@@ -107,11 +117,22 @@ public class Pesanan
         isSelesai = diproses;
     }
     
+    /**
+     * Ini merupakan Methode mutator untuk set Room
+     * 
+     * @param kamar merupakan Object yang akan di pasangkan pada object pesanan
+     */
+    public void setRoom(Room kamar)
+    {
+        this.kamar = kamar;
+    }
+    
     //Methode print semua data
     /**
      * Merupakan Metod yang akan digunakan untuk mengprint data.
      */
     public void printData()
     {
+        System.out.println(biaya);
     }
 }

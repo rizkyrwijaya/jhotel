@@ -1,38 +1,38 @@
  /**
- * Class DatabaseCustomer untuk Case Study Praktikum OOP 
+ * Class DatabaseRoom untuk Case Study Praktikum OOP 
  *
  * @author Rizky Ramadian Wijaya
- * @version 1/3/2018
+ * @version 7/3/2018
  */
-public class DatabaseCustomer
+public class DatabaseRoom
 {
     //Bagian disini menunjukan Variabel-variabel pada class
-    private static String[] list_customer;
+    private static String[] list_room;
     
     //Methode bagian sini akan dibenarkan, sampai modul integrasi database dengan java
     /**
      * Merupakan metode yang akan digunakan pada link database
-     * dengan customer untuk menambah customer kepada database
+     * dengan Room untuk menambah Rooom kepada database
      */
-    public static boolean addCustomer(Customer baru)
+    public static boolean addRoom(Customer baru)
     {
      return false;
     }
     
     /**
      * Merupakan metode yang akan digunakan pada link database
-     * dengan customer untuk menghapus customer kepada database
+     * dengan Room untuk menghapus Room kepada database
      */
-    public static boolean removeCustomer(int id)
+    public static boolean removeRoom(int id)
     {
         return false;
     }
     
      /**
      * Merupakan metode yang akan digunakan pada link database
-     * dengan customer untuk mendapatkan databasecustomer
+     * dengan Room untuk mendapatkan database Room
      */
-    public static String[] getCustomerDatabase()
+    public static String[] getRoomDatabase()
     {
         return null;
     }

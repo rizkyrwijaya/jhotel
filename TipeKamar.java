@@ -28,6 +28,6 @@ public enum TipeKamar
      */
     public String toString()
     {
-        return type;
+        return this.type;
     }
 }

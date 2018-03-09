@@ -28,6 +28,6 @@ public enum StatusKamar
      */
     public String toString()
     {
-        return status;
+        return this.status;
     }
 }

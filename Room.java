@@ -20,8 +20,14 @@ public class Room
     /**
      * Constructor for objects of class Room
      */
-    public Room()
+    public Room(Hotel hotel,String nomor_kamar,boolean isAvailable,Customer customer, double dailyTariff, StatusKamar status_kamar)
     {
+        this.hotel = hotel;
+        this.nomor_kamar = nomor_kamar;
+        this.isAvailable = isAvailable;
+        this.customer = customer;
+        this.dailyTariff = dailyTariff;
+        this.status_kamar = status_kamar;
     }
 
     /**
@@ -192,6 +198,12 @@ public class Room
     
     public void printData()
     {
+        System.out.println(getHotel().getNama());
+        System.out.println(nomor_kamar);
+        System.out.println(isAvailable);
+        getCustomer().printData();
+        System.out.println(dailyTariff);
+        System.out.println(status_kamar.toString());
     }
     
     

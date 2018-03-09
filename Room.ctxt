@@ -1,8 +1,8 @@
 #BlueJ class context
 comment0.target=Room
 comment0.text=\r\n\ Class\ untuk\ objek\ objek\ Room\r\n\r\n\ @author\ Rizky\ Ramadian\ Wijaya\r\n\ @version\ 8/3/2018\r\n
-comment1.params=
-comment1.target=Room()
+comment1.params=hotel\ nomor_kamar\ isAvailable\ customer\ dailyTariff\ status_kamar
+comment1.target=Room(Hotel,\ java.lang.String,\ boolean,\ Customer,\ double,\ StatusKamar)
 comment1.text=\r\n\ Constructor\ for\ objects\ of\ class\ Room\r\n
 comment10.params=hotel
 comment10.target=void\ setHotel(Hotel)

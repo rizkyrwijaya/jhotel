@@ -11,7 +11,7 @@ public class Pesanan
     private double biaya;
     private Customer pelanggan;
     private String nama_pelanggan;
-    private String jenis_kamar;
+    private TipeKamar tipe_kamar;
     private boolean isDiproses;
     private boolean isSelesai;
     private Room kamar;
@@ -47,6 +47,24 @@ public class Pesanan
      */
     public Customer getPelanggan(){
         return pelanggan;
+    }
+    
+    /**
+     * Ini merupakan Methode untuk mendapatkan Nama pelanggan dari objek class pesanan
+     * 
+     * @return nama_pelanggan mengembalikkan variabel nama_pelanggan objek class pesanan
+     */
+    public String getNamaPelanggan(){
+        return nama_pelanggan;
+    }
+    
+    /**
+     * Ini merupakan Methode untuk mendapatkan tipe kamar dari objek class pesanan
+     * 
+     * @return tipe_kamar mengembalikkan variabel tipe_kamar objek class pesanan
+     */
+    public TipeKamar getTipeKamar(){
+        return tipe_kamar;
     }
     
     /**
@@ -98,6 +116,26 @@ public class Pesanan
     }
     
     /**
+     * Ini merupakan Methode mutator untuk set nilai nama Pelanggan 
+     * 
+     * @param nama_pelanggan merupakan variabel yang akan di masukkan pada variable nama_pelanggan pada Class
+     */
+    public void setNamaPelanggan(String nama_pelanggan)
+    {
+        this.nama_pelanggan=nama_pelanggan;
+    }
+    
+    /**
+     * Ini merupakan Methode mutator untuk set nilai nama Tipe Kamar 
+     * 
+     * @param tipe_kamar merupakan variabel yang akan di masukkan pada variable tipe_kamar pada Class
+     */
+    public void setTipeKamar(TipeKamar tipe_kamar)
+    {
+        this.tipe_kamar=tipe_kamar;
+    }
+    
+    /**
      * Ini merupakan Methode mutator untuk set nilai isDiproses
      * 
      * @param diproses merupakan variabel yang akan di masukkan pada variable isDiproses pada Class
@@ -133,6 +171,9 @@ public class Pesanan
      */
     public void printData()
     {
-        System.out.println(biaya);
+        System.out.println(nama_pelanggan);
+        System.out.println(tipe_kamar);
+        System.out.println(isDiproses);
+        System.out.println(isSelesai);
     }
 }

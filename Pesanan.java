@@ -168,12 +168,20 @@ public class Pesanan
     //Methode print semua data
     /**
      * Merupakan Metod yang akan digunakan untuk mengprint data.
+     * Tipe kamar harus di edit untuk to string, sekarang tidak bisa karena belom di set oleh fungsi - fungsi
+     * Untuk mengurangi permasalah nullexception diberikan try catch.
      */
     public void printData()
     {
-        System.out.println(nama_pelanggan);
-        System.out.println(tipe_kamar);
-        System.out.println(isDiproses);
-        System.out.println(isSelesai);
+        System.out.println("\n======================PESANAN======================\n");
+        System.out.println("Nama Pelanggan \t\t: " + getPelanggan().getNama());
+        try {
+            System.out.println("Tipe Kamar dipesan \t: " + tipe_kamar.toString());
+        }
+        catch (NullPointerException e){
+            System.out.println("Tipe Kamar dipesan \t: Not set");
+        }
+        System.out.println("Sedang di proses \t\t: " + isDiproses);
+        System.out.println("Sudah Selesai  \t\t: " + isSelesai);
     }
 }

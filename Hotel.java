@@ -89,9 +89,10 @@ public class Hotel
      * Merupakan Metod yang akan digunakan untuk mengprint data.
      */
     public void printData(){
-        System.out.println(nama);
+        System.out.println("\n====================INFO HOTEL=====================\n");
+        System.out.println("Nama Hotel \t\t:" + nama);
+        System.out.println("Bintang Hotel \t\t:" + bintang);
         getLokasi().printData();
-        System.out.println(bintang);
     }
     
     

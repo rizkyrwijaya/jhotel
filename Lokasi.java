@@ -89,9 +89,10 @@ public class Lokasi
      * Merupakan Metod yang akan digunakan untuk mengprint data.
      */
     public void printData(){
-        System.out.println(x_coord);
-        System.out.println(y_coord);
-        System.out.println(deskripsiLokasi);
+        System.out.println("\n====================LOKASI HOTEL===================\n");
+        System.out.println("Coordinasi X \t\t: " + x_coord);
+        System.out.println("Coordinasi Y \t\t: " + y_coord);
+        System.out.println("Deskripsi Lokasi\t\t: " + deskripsiLokasi);
     }
     
 }

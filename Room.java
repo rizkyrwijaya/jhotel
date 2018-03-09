@@ -198,12 +198,13 @@ public class Room
     
     public void printData()
     {
-        System.out.println(getHotel().getNama());
-        System.out.println(nomor_kamar);
-        System.out.println(isAvailable);
+        System.out.println("\n====================INFO KAMAR=====================\n");
+        System.out.println("Nama Hotel \t\t: " + getHotel().getNama());
+        System.out.println("Nomor Kamar \t\t: " + nomor_kamar);
+        System.out.println("Ketersediaan Kamar \t: " + isAvailable);
+        System.out.println("Harga Permalam  \t\t: " + dailyTariff);
+        System.out.println("Status Kamar \t\t: " + status_kamar.toString());
         getCustomer().printData();
-        System.out.println(dailyTariff);
-        System.out.println(status_kamar.toString());
     }
     
     

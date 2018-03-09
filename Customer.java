@@ -71,8 +71,9 @@ public class Customer
      */
     public void printData()
     {
-        System.out.println(id);
-        System.out.println(nama);
+        System.out.println("\n==================INFO PELANGGAN===================\n");
+        System.out.println("ID Customer \t\t: " + id);
+        System.out.println("Nama Customer\t\t: " + nama);
     }
     
 

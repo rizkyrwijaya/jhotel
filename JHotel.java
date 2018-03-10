@@ -34,6 +34,7 @@ public class JHotel
         System.out.println("\n======================FUNGSI 2=====================");
         pesanan1.printData();
         kamar1.printData();
+        
         //Test Ketiga fungsi pesananSelesai dengan kamar)
         Administrasi.pesananDitugaskan(pesanan1,kamar1);
         Administrasi.pesananSelesai(kamar1);
@@ -50,7 +51,7 @@ public class JHotel
         
         //Test Kelima fungsi pesananSelesai dengan pesanan
         Administrasi.pesananDitugaskan(pesanan1,kamar1);        
-        Administrasi.pesananDibatalkan(pesanan1);
+        Administrasi.pesananSelesai(pesanan1);
         System.out.println("\n======================FUNGSI 5=====================");
         pesanan1.printData();
         kamar1.printData();

@@ -90,9 +90,9 @@ public class Hotel
      */
     public void printData(){
         System.out.println("\n====================INFO HOTEL=====================\n");
-        System.out.println("Nama Hotel \t\t:" + nama);
-        System.out.println("Bintang Hotel \t\t:" + bintang);
-        getLokasi().printData();
+        System.out.println("Nama Hotel \t\t: " + nama);
+        System.out.println("Bintang Hotel \t\t :" + bintang);
+        System.out.println("Lokasi Hotel \t\t: " + getLokasi().getDeskripsi());
     }
     
     

@@ -204,7 +204,7 @@ public class Room
         System.out.println("Ketersediaan Kamar \t: " + isAvailable);
         System.out.println("Harga Permalam  \t\t: " + dailyTariff);
         System.out.println("Status Kamar \t\t: " + status_kamar.toString());
-        getCustomer().printData();
+        System.out.println("Pelanggan Kamar \t\t: " + getCustomer().getNama());
     }
     
     

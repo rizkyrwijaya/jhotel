@@ -7,7 +7,7 @@
 public class DatabaseCustomer
 {
     //Bagian disini menunjukan Variabel-variabel pada class
-    private static String[] list_customer;
+    private static Customer list_customer;
     
     //Methode bagian sini akan dibenarkan, sampai modul integrasi database dengan java
     /**

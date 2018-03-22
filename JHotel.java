@@ -57,6 +57,8 @@ public class JHotel
         pesanan1.printData();
         kamar1.printData();
         */
+       
+        /*
         System.out.println("7a");
         Lokasi lokasi1 = new Lokasi(30, 30, "Bukan Lokasi saya");
         Hotel hotel1 = new Hotel("Bukan Hotel Saya", lokasi1, 5);
@@ -100,7 +102,7 @@ public class JHotel
         else {
             System.out.println("Salah, bukan Double Room");
         }
-        
+        */
         
     }
     

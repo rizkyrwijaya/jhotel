@@ -1,10 +1,12 @@
-
- /**
+/**
  * Class Pesanan Tugas Case Study Prak OOP
  *
  * @author Rizky Ramadian Wijaya
  * @version 1/3/2018
  */
+
+import java.util.*;
+
 public class Pesanan
 {
     //Bagian disini menunjukan Variabel-variabel pada class
@@ -14,6 +16,7 @@ public class Pesanan
     private boolean isDiproses;
     private boolean isSelesai;
     private Room kamar;
+    private Date tanggalPesan;
 
     //Method Constructor dari Class
     /**
@@ -22,12 +25,22 @@ public class Pesanan
      * @param biaya merupakan parameter untuk menentukan harga pesanan
      * @param pelanggan merupakan parameter yang akan menunjukan pelanggan yang memesan
      */
-    public Pesanan(double jumlahHari,Customer pelanggan,Room kamar)
+    public Pesanan(double jumlahHari,Customer pelanggan,Room kamar,int year, int month, int day)
     {
         this.jumlahHari=jumlahHari;
         this.pelanggan = pelanggan;
         this.kamar = kamar;
         this.biaya = kamar.getDailyTariff()*jumlahHari;
+        this.tanggalPesan = new GregorianCalendar(year,month,day).getTime();
+    }
+    
+    public Pesanan(double jumlahHari,Customer pelanggan,Room kamar,Date tanggalPesan)
+    {
+        this.jumlahHari=jumlahHari;
+        this.pelanggan = pelanggan;
+        this.kamar = kamar;
+        this.biaya = kamar.getDailyTariff()*jumlahHari;
+        this.tanggalPesan = tanggalPesan;
     }
     
     //Methode Getter (Accessor) untuk class
@@ -85,6 +98,15 @@ public class Pesanan
      */
     public Room getRoom(){
         return kamar;
+    }
+    
+    /**
+     * Ini merupakan Methode untuk mendapatkan Date dari Object ini
+     * 
+     * @return tanggalPesan merupakan tanggal pesanan
+     */
+    public Date tanggalPesan(){
+        return tanggalPesan;
     }
     
     //Methode Setter (Mutator) untuk class
@@ -147,6 +169,16 @@ public class Pesanan
     public void setRoom(Room kamar)
     {
         this.kamar = kamar;
+    }
+    
+    /**
+     * Ini merupakan Methode untuk mengset Date dari Object ini
+     * 
+     * @return tanggalPesan merupakan tanggal pesanan
+     * 
+     */
+    public void tanggalPesan(Date tanggalPesan){
+        this.tanggalPesan = tanggalPesan;
     }
     
     //Methode print semua data

@@ -7,7 +7,7 @@
 public class DatabasePesanan
 {
     //Bagian disini menunjukan Variabel-variabel pada class
-    private static String[] list_pesanan;
+    private static Pesanan list_pesanan;
     
     //Metode pada Database yang akan diperbaiki nanti
     /**

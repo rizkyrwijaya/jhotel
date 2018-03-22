@@ -31,7 +31,7 @@ public class Pesanan
         this.pelanggan = pelanggan;
         this.kamar = kamar;
         this.biaya = kamar.getDailyTariff()*jumlahHari;
-        this.tanggalPesan = new GregorianCalendar(year,month,day).getTime();
+        this.tanggalPesan = new GregorianCalendar(year,month-1,day).getTime();
     }
     
     public Pesanan(double jumlahHari,Customer pelanggan,Room kamar,Date tanggalPesan)
@@ -41,6 +41,7 @@ public class Pesanan
         this.kamar = kamar;
         this.biaya = kamar.getDailyTariff()*jumlahHari;
         this.tanggalPesan = tanggalPesan;
+        this.tanggalPesan.setMonth(tanggalPesan.getMonth()-1);
     }
     
     //Methode Getter (Accessor) untuk class
@@ -187,13 +188,17 @@ public class Pesanan
      * Tipe kamar harus di edit untuk to string, sekarang tidak bisa karena belom di set oleh fungsi - fungsi
      * Untuk mengurangi permasalah nullexception diberikan try catch.
      */
-    public void printData()
+    public String toString()
     {
-        System.out.println("\n======================PESANAN======================\n");
-        System.out.println("Nama Pelanggan \t\t: " + getPelanggan().getNama());
-        System.out.println("JumlahHari pesan\t\t: " + jumlahHari);
-        System.out.println("Sedang di proses \t\t: " + isDiproses);
-        System.out.println("Sudah Selesai  \t\t: " + isSelesai);
-        System.out.println("Harga Total \t\t: " + biaya);
+        String final_status = "KOSONG";
+        if(isDiproses == true && isSelesai == false) final_status = "DIPROSES";
+        else if(isDiproses == false && isSelesai == false) final_status = "KOSONG";
+        else if(isDiproses == false && isSelesai == true) final_status = "SELESAI";
+        
+        return "Dibuat oleh " + getPelanggan().getNama() 
+            + ". Proses booking untuk " + getRoom().getHotel().getNama() 
+            + "kamar nomor " + getRoom().getNomorKamar() 
+            + "dengan tipe kamar yang diinginkan " + getRoom().getTipeKamar().toString() 
+            + ". Status: " + final_status + ".";
     }
 }

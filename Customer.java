@@ -6,6 +6,7 @@
  */
 
 import java.util.*;
+import java.text.*;
 
 public class Customer
 {
@@ -14,6 +15,8 @@ public class Customer
     protected String nama;
     protected String email;
     protected Date dob;
+    
+    SimpleDateFormat dobformat = new SimpleDateFormat("dd MMMMMMMMM yyyy");
     
     //Method Constructor dari Class
     /**
@@ -26,7 +29,7 @@ public class Customer
     {
         this.id = id;
         this.nama = nama;
-        this.dob = new GregorianCalendar(year,month,date).getTime();
+        this.dob = new GregorianCalendar(year,month-1,date).getTime();
     }
     
     public Customer(int id, String nama,Date dob)
@@ -34,6 +37,7 @@ public class Customer
         this.id = id;
         this.nama = nama;
         this.dob = dob;
+        this.dob.setMonth(dob.getMonth()-1);
     }
     
     //Methode Getter (Accessor) untuk class
@@ -74,7 +78,8 @@ public class Customer
      */
     public Date getDOB()
     {
-        System.out.println("DOB:" + dob.getDate() +"/"+ dob.getMonth() +"/"+ dob.getYear());
+        //System.out.printf("DOB: %te %<tB %<tY",dob);
+        //System.out.println("DOB: " + dobformat.format(dob));
         return dob;
     }
     
@@ -130,12 +135,24 @@ public class Customer
     /**
      * Merupakan Metod yang akan digunakan untuk mengprint data.
      */
-    public void printData()
+    public String toString()
     {
-        System.out.println("\n==================INFO PELANGGAN===================\n");
-        System.out.println("ID Customer \t\t: " + id);
-        System.out.println("Nama Customer\t\t: " + nama);
+        if(DatabasePesanan.getPesanan(this)==null)
+        {
+            return "\nCustomer ID \t:" + getID() 
+                + "\nName \t\t:" + getNama()
+                + "\nE-Mail \t\t:" + getEmail()
+                + "\nDate of Birth \t:" + dobformat.format(getDOB());
+        }
+        else 
+        {
+            return "\nCustomer ID \t:" + getID() 
+                + "\nName \t\t:" + getNama()
+                + "\nE-Mail \t\t:" + getEmail()
+                + "\nDate of Birth \t:" + dobformat.format(getDOB())
+                + "\nBooking Order is in progress";
+        }
+        
     }
     
-
 }

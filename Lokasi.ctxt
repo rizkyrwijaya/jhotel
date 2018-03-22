@@ -23,6 +23,6 @@ comment7.params=deskripsi
 comment7.target=void\ setDeskripsi(java.lang.String)
 comment7.text=\r\n\ Ini\ merupakan\ Methode\ mutator\ untuk\ set\ nilai\ deskripsiLokasi\r\n\ \r\n\ @param\ deskripsi\ merupakan\ variabel\ yang\ akan\ di\ masukkan\ pada\ variable\ deskripsi\ pada\ Object\ Class\ Lokasi\r\n
 comment8.params=
-comment8.target=void\ printData()
+comment8.target=java.lang.String\ toString()
 comment8.text=\r\n\ Merupakan\ Metod\ yang\ akan\ digunakan\ untuk\ mengprint\ data.\r\n
 numComments=9

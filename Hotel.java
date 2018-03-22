@@ -88,11 +88,10 @@ public class Hotel
     /**
      * Merupakan Metod yang akan digunakan untuk mengprint data.
      */
-    public void printData(){
-        System.out.println("\n====================INFO HOTEL=====================\n");
-        System.out.println("Nama Hotel \t\t: " + nama);
-        System.out.println("Bintang Hotel \t\t :" + bintang);
-        System.out.println("Lokasi Hotel \t\t: " + getLokasi().getDeskripsi());
+    public String toString(){
+        return "Nama Hotel \t\t:" + getNama() 
+            +"\nBintang Hotel \t\t:" + getBintang() 
+            + "\nLokasi Hotel \t\t:" + getLokasi().getDeskripsi();
     }
     
     

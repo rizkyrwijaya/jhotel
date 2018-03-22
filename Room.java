@@ -162,15 +162,23 @@ public abstract class Room
      * 
      */
     
-    public void printData()
+    public String toString()
     {
-        System.out.println("\n====================INFO KAMAR=====================\n");
-        System.out.println("Nama Hotel \t\t: " + getHotel().getNama());
-        System.out.println("Nomor Kamar \t\t: " + nomor_kamar);
-        System.out.println("Ketersediaan Kamar \t: " + isAvailable);
-        System.out.println("Harga Permalam  \t\t: " + dailyTariff);
-        System.out.println("Status Kamar \t\t: " + status_kamar.toString());
-        System.out.println("Tipe Kamar \t\t: " + getTipeKamar().toString());
+        if(isAvailable)
+        {
+            return "\nNama Hotel \t\t:" + getHotel().getNama() 
+                + "\nTipe Kamar \t\t:" + getTipeKamar()
+                + "\nHarga \t\t:" + getDailyTariff()
+                + "\nStatus Kamar \t\t:" + getStatusKamar().toString();
+        }
+        else 
+        {
+            return "\nNama Hotel \t\t:" + getHotel().getNama() 
+                + "\nTipe Kamar \t\t:" + getTipeKamar()
+                + "\nHarga \t\t:" + getDailyTariff()
+                + "\nStatus Kamar \t\t:" + getStatusKamar().toString()
+                + "Pelanggan \t\t:" + getPesanan().getPelanggan().getNama();
+        }
     }
     
     

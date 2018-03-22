@@ -4,6 +4,9 @@
  * @author Rizky Ramadian Wijaya
  * @version 1/3/2018
  */
+
+import java.util.*;
+
 public class JHotel
 {   
     /**
@@ -103,6 +106,11 @@ public class JHotel
             System.out.println("Salah, bukan Double Room");
         }
         */
+       
+        Lokasi lokasi1 = new Lokasi(123,123,"Dirumah");
+        Hotel hotel1 = new Hotel("Nama",lokasi1,100);
+        Customer customer1 = new Customer(1234,"RIzkyRamadianWIjaya",1997,1,3);
+        System.out.println(hotel1.toString());
         
     }
     

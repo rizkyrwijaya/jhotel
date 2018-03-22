@@ -23,6 +23,6 @@ comment7.params=bintang
 comment7.target=void\ setBintang(int)
 comment7.text=\r\n\ Ini\ merupakan\ Methode\ mutator\ untuk\ set\ nilai\ bintang\r\n\ \r\n\ @param\ bintang\ merupakan\ variabel\ yang\ akan\ di\ masukkan\ pada\ variable\ bintang\ pada\ Object\ Class\r\n
 comment8.params=
-comment8.target=void\ printData()
+comment8.target=java.lang.String\ toString()
 comment8.text=\r\n\ Merupakan\ Metod\ yang\ akan\ digunakan\ untuk\ mengprint\ data.\r\n
 numComments=9

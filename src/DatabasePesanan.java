@@ -66,7 +66,7 @@ public class DatabasePesanan
             if(pesan.equals(pesan2)){
                 if(pesan.getRoom() != null) Administrasi.pesananDibatalkan(pesan);
                 else if(pesan.getStatusAktif() == true) pesan.setStatusAktif(false);
-                PESANAN_DATABASE.remove(pesan);
+                PESANAN_DATABASE.remove(pesan2);
                 return true;
             }
         }

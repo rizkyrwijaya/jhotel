@@ -21,23 +21,20 @@ public class Customer
     //Method Constructor dari Class
     /**
      * Ini merupakan Constructor dari Class Customer
-     * 
-     * @param id merupakan parameter untuk menentukan id tiap customer
-     * @param id merupakan penentuan nama untuk Customer
+     *
      */
-    public Customer(int id, String nama,int year,int month, int date)
+    public Customer(String nama,int year,int month, int date)
     {
-        this.id = id;
+        this.id = DatabaseCustomer.getLastCustomerID()+1;
         this.nama = nama;
         this.dob = new GregorianCalendar(year,month-1,date).getTime();
     }
     
-    public Customer(int id, String nama,Date dob)
+    public Customer(String nama,Date dob)
     {
-        this.id = id;
+        this.id = DatabaseCustomer.getLastCustomerID()+1;
         this.nama = nama;
         this.dob = dob;
-        this.dob.setMonth(dob.getMonth()-1);
     }
     
     //Methode Getter (Accessor) untuk class
@@ -46,8 +43,7 @@ public class Customer
      * 
      * @return id merupakan id yang di dapatkan
      */
-    public int getID()
-    {
+    public int getID()    {
         return id;
     }
     
@@ -56,8 +52,7 @@ public class Customer
      * 
      * @return nama merupakan nama yang di dapatkan
      */
-    public String getNama()
-    {
+    public String getNama()    {
         return nama;
     }
     
@@ -66,8 +61,7 @@ public class Customer
      * 
      * @return email merupakan email yang di dapatkan
      */
-    public String getEmail()
-    {
+    public String getEmail()    {
         return email;
     }
     
@@ -76,8 +70,7 @@ public class Customer
      * 
      * @return dob merupakan email yang di dapatkan
      */
-    public Date getDOB()
-    {
+    public Date getDOB() {
         //System.out.printf("DOB: %te %<tB %<tY",dob);
         //System.out.println("DOB: " + dobformat.format(dob));
         return dob;
@@ -89,8 +82,7 @@ public class Customer
      * 
      * @param id merupakan id yang dimasukkan
      */
-    public void setID(int id)
-    {
+    public void setID(int id) {
         this.id = id;
     }
     
@@ -99,8 +91,7 @@ public class Customer
      * 
      * @param nama merupakan nama Customer yang dimasukkan
      */
-    public void setNama(String nama)
-    {
+    public void setNama(String nama){
         this.nama = nama;
     }
     
@@ -109,8 +100,7 @@ public class Customer
      * 
      * @param email mengubah email dari instansi object
      */
-    public void setEmail(String email)
-    {
+    public void setEmail(String email){
         if (email.matches("^[_A-Za-z0-9-\\+]+(\\.[_A-Za-z0-9-]+)*@"
         + "[A-Za-z0-9-]+(\\.[A-Za-z0-9]+)*(\\.[A-Za-z]{2,})$")){
             System.out.println("Email valid");
@@ -126,8 +116,7 @@ public class Customer
      * 
      * @param dob mengubah date of birth dari instansi object
      */
-    public void setDOB(Date dob)
-    {
+    public void setDOB(Date dob){
         this.dob = dob;
     }
     
@@ -135,9 +124,8 @@ public class Customer
     /**
      * Merupakan Metod yang akan digunakan untuk mengprint data.
      */
-    public String toString()
-    {
-        if(DatabasePesanan.getPesanan(this)==null)
+    public String toString() {
+        if(DatabasePesanan.getPesananAktif(this)==null)
         {
             return "\nCustomer ID \t:" + getID() 
                 + "\nName \t\t:" + getNama()

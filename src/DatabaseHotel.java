@@ -10,10 +10,9 @@ public class DatabaseHotel
 {
     //Bagian disini menunjukan Variabel-variabel pada class
     private static ArrayList<Hotel> HOTEL_DATABASE = new ArrayList<>();
-    private static int LAST_HOTEL_ID;
+    private static int LAST_HOTEL_ID = 0;
     
     //Methode bagian sini akan dibenarkan, sampai modul integrasi database dengan java
-
     public static ArrayList<Hotel> getHotelDatabase() {
         return HOTEL_DATABASE;
     }
@@ -27,10 +26,20 @@ public class DatabaseHotel
      * dengan Room untuk menambah Rooom kepada database
      */
     public static boolean addHotel(Hotel baru) {
-        return false;
+        for (Hotel hotel :
+                HOTEL_DATABASE) {
+            if(hotel.getID() == baru.getID()) return false;
+        }
+        HOTEL_DATABASE.add(baru);
+        LAST_HOTEL_ID = baru.getID();
+        return true;
     }
 
-    public static Hotel getHotel(String nama){
+    public static Hotel getHotel(int id){
+        for (Hotel hotel :
+                HOTEL_DATABASE) {
+            if (hotel.getID() == id) return hotel;
+        }
         return null;
     }
     /**
@@ -38,7 +47,17 @@ public class DatabaseHotel
      * dengan Room untuk menghapus Room kepada database
      */
     public static boolean removeHotel(int id) {
+        for (Hotel hotel :
+                HOTEL_DATABASE) {
+            if(hotel.getID()==id){
+                for (Room kamar :
+                        DatabaseRoom.getRoomsFromHotel(hotel)) {
+                    DatabaseRoom.removeRoom(hotel, kamar.getNomorKamar());
+                }
+                HOTEL_DATABASE.remove(hotel);
+                return true;
+            }
+        }
         return false;
     }
-
 }

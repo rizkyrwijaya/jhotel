@@ -16,8 +16,7 @@ public enum StatusKamar
      * 
      * @param type merupakan status dalam string
      */
-    StatusKamar(String status)
-    {
+    StatusKamar(String status) {
         this.status=status;
     }
     
@@ -26,8 +25,7 @@ public enum StatusKamar
      * 
      * @return type mengembalikkan status kamar sebagai string
      */
-    public String toString()
-    {
+    public String toString() {
         return this.status;
     }
 }

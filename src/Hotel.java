@@ -9,6 +9,7 @@
 public class Hotel
 {
     //Bagian disini menunjukan Variabel variabel pada class Hotel
+    private int id;
     private String nama;
     private Lokasi lokasi;
     private int bintang;
@@ -26,9 +27,16 @@ public class Hotel
         this.nama = nama;
         this.lokasi = lokasi;
         this.bintang = bintang;
+        this.id = DatabaseHotel.getLastHotelID()+1;
     }
     
     //Methode Getter (Accessor) untuk class
+
+
+    public int getID() {
+        return id;
+    }
+
     /**
      * Ini merupakan Methode untuk mendapatkan nama dari objek class Hotel
      * 
@@ -57,6 +65,12 @@ public class Hotel
     }
     
     //Methode Setter (Mutator) untuk class
+
+
+    public void setID(int id) {
+        this.id = id;
+    }
+
     /**
      * Ini merupakan Methode mutator untuk set nilai nama
      * 

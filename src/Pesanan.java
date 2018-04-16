@@ -30,8 +30,8 @@ public class Pesanan
     public Pesanan(double jumlahHari,Customer pelanggan) {
         this.jumlahHari = jumlahHari;
         this.pelanggan = pelanggan;
-        this.kamar = kamar;
-        this.biaya = kamar.getDailyTariff()*jumlahHari;
+        //this.kamar = kamar;
+        //this.biaya = kamar.getDailyTariff()*jumlahHari;
         this.isAktif = true;
         this.tanggalPesan = new Date();
         this.id = DatabasePesanan.getLastPesananID()+1;
@@ -202,11 +202,16 @@ public class Pesanan
         if(isDiproses == true && isSelesai == false) final_status = "DIPROSES";
         else if(isDiproses == false && isSelesai == false) final_status = "KOSONG";
         else if(isDiproses == false && isSelesai == true) final_status = "SELESAI";
-        
-        return "Dibuat oleh " + getPelanggan().getNama() 
-            + ". Proses booking untuk " + getRoom().getHotel().getNama() 
-            + "kamar nomor " + getRoom().getNomorKamar() 
-            + "dengan tipe kamar yang diinginkan " + getRoom().getTipeKamar().toString() 
-            + ". Status: " + final_status + ".";
+
+        if(getRoom()==null){
+            return "\npelanggan=" + getPelanggan().getNama()
+                    + " status=" + final_status;
+        }
+
+        return "pelanggan=" + getPelanggan().getNama()
+            + " hotel=" + getRoom().getHotel().getNama()
+            + " kamar=" + getRoom().getNomorKamar()
+            + " tipeKamar=" + getRoom().getTipeKamar().toString()
+            + " Status=" + final_status + ".";
     }
 }

@@ -12,7 +12,7 @@ public class DatabaseRoom
     private static ArrayList<Room> ROOM_DATABASE = new ArrayList<>();
     
     //Methode bagian sini akan dibenarkan, sampai modul integrasi database dengan java
-    public static ArrayList<Room> getRoomDatbabse(){
+    public static ArrayList<Room> getRoomDatabase(){
         return ROOM_DATABASE;
     }
 

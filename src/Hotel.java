@@ -103,9 +103,9 @@ public class Hotel
      * Merupakan Metod yang akan digunakan untuk mengprint data.
      */
     public String toString(){
-        return "Nama Hotel \t\t:" + getNama() 
-            +"\nBintang Hotel \t\t:" + getBintang() 
-            + "\nLokasi Hotel \t\t:" + getLokasi().getDeskripsi();
+        return "Hotel: " + getNama()
+            +"\tBintang: " + getBintang()
+            + "\tLokasi: " + getLokasi().getDeskripsi()+"\n";
     }
     
     

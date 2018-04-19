@@ -204,14 +204,14 @@ public class Pesanan
         else if(isDiproses == false && isSelesai == true) final_status = "SELESAI";
 
         if(getRoom()==null){
-            return "\npelanggan=" + getPelanggan().getNama()
-                    + " status=" + final_status;
+            return "\nPelanggan:" + getPelanggan().getNama()
+                    + "\tstatus:" + final_status;
         }
 
-        return "pelanggan=" + getPelanggan().getNama()
-            + " hotel=" + getRoom().getHotel().getNama()
-            + " kamar=" + getRoom().getNomorKamar()
-            + " tipeKamar=" + getRoom().getTipeKamar().toString()
-            + " Status=" + final_status + ".";
+        return "\npelanggan: " + getPelanggan().getNama()
+            + "\thotel: " + getRoom().getHotel().getNama()
+            + "\tkamar: "  + getRoom().getNomorKamar()
+            + "\ttipeKamar: " + getRoom().getTipeKamar().toString()
+            + "\tStatus: " + final_status + ".";
     }
 }

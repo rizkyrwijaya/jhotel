@@ -1,4 +1,3 @@
-
 /**
  * Class untuk objek objek Room
  *
@@ -16,7 +15,7 @@ public abstract class Room
     /**
      * Constructor for objects of class Room
      */
-    public Room(Hotel hotel,String nomor_kamar,StatusKamar status_kamar)
+    public Room(Hotel hotel,String nomor_kamar)
     {
         this.hotel = hotel;
         this.nomor_kamar = nomor_kamar;
@@ -116,18 +115,18 @@ public abstract class Room
     {
         if(DatabasePesanan.getPesanan(this) == null)
         {
-            return "\nNama Hotel \t\t:" + getHotel().getNama()
-                    + "\nTipe Kamar \t\t:" + getTipeKamar()
-                    + "\nHarga \t\t:" + getDailyTariff()
-                    + "\nStatus Kamar \t\t:" + getStatusKamar().toString();
+            return "Hotel: " + getHotel().getNama()
+                    + "\tTipeKamar: " + getTipeKamar()
+                    + "\tHarga: " + getDailyTariff()
+                    + "\tStatusKamar:" + getStatusKamar().toString() + "\n";
         }
         else
         {
-            return "\nNama Hotel \t\t:" + getHotel().getNama()
-                    + "\nTipe Kamar \t\t:" + getTipeKamar()
-                    + "\nHarga \t\t:" + getDailyTariff()
-                    + "\nStatus Kamar \t\t:" + getStatusKamar().toString()
-                    + "Pelanggan \t\t:" + DatabasePesanan.getPesanan(this).getPelanggan().getNama();
+            return "Hotel: " + getHotel().getNama()
+                    + "\tTipeKamar: " + getTipeKamar()
+                    + "\tHarga:" + getDailyTariff()
+                    + "\tStatus Kamar: " + getStatusKamar().toString()
+                    + "Pelanggan: " + DatabasePesanan.getPesanan(this).getPelanggan().getNama() + "\n";
         }
     }
     

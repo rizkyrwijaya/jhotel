@@ -23,18 +23,20 @@ public class Customer
      * Ini merupakan Constructor dari Class Customer
      *
      */
-    public Customer(String nama,int year,int month, int date)
+    public Customer(String nama,int year,int month, int date,String email)
     {
         this.id = DatabaseCustomer.getLastCustomerID()+1;
         this.nama = nama;
         this.dob = new GregorianCalendar(year,month-1,date).getTime();
+        this.email = email;
     }
     
-    public Customer(String nama,Date dob)
+    public Customer(String nama,Date dob,String email)
     {
         this.id = DatabaseCustomer.getLastCustomerID()+1;
         this.nama = nama;
         this.dob = dob;
+        this.email = email;
     }
     
     //Methode Getter (Accessor) untuk class
@@ -127,20 +129,19 @@ public class Customer
     public String toString() {
         if(DatabasePesanan.getPesananAktif(this)==null)
         {
-            return "\nCustomer ID \t:" + getID() 
-                + "\nName \t\t:" + getNama()
-                + "\nE-Mail \t\t:" + getEmail()
-                + "\nDate of Birth \t:" + dobformat.format(getDOB());
+            return "ID: " + getID()
+                + "\tName: " + getNama()
+                + "\tE-Mail: " + getEmail()
+                + "\tDoB: " + dobformat.format(getDOB())
+                + "\tBooking Order is in progress\n";
         }
-        else 
+        else
         {
-            return "\nCustomer ID \t:" + getID() 
-                + "\nName \t\t:" + getNama()
-                + "\nE-Mail \t\t:" + getEmail()
-                + "\nDate of Birth \t:" + dobformat.format(getDOB())
-                + "\nBooking Order is in progress";
+            return "ID: " + getID()
+                    + "\tName: " + getNama()
+                    + "\tE-Mail: " + getEmail()
+                    + "\tDoB: " + dobformat.format(getDOB()) + "\n";
         }
-        
     }
     
 }

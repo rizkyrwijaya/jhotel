@@ -19,14 +19,14 @@ public class DatabasePesanan
         return LAST_PESANAN_ID;
     }
 
-    public static boolean addPesanan(Pesanan baru){
+    public static boolean addPesanan(Pesanan baru) throws PesananSudahAdaException{
         if(getPesananAktif(baru.getPelanggan()) == null){
             PESANAN_DATABASE.add(baru);
             LAST_PESANAN_ID = baru.getID();
             return true;
         }
         else {
-            return false;
+            throw new PesananSudahAdaException(baru);
         }
     }
 
@@ -60,7 +60,7 @@ public class DatabasePesanan
         return null;
     }
 
-    public static boolean removePesanan(Pesanan pesan){
+    public static boolean removePesanan(Pesanan pesan) throws PesananTidakDitemukanException{
         for (Pesanan pesan2 :
                 PESANAN_DATABASE) {
             if(pesan.equals(pesan2)){
@@ -70,6 +70,8 @@ public class DatabasePesanan
                 return true;
             }
         }
-        return false;
+        throw new PesananTidakDitemukanException(pesan.getPelanggan());
     }
+
+
 }

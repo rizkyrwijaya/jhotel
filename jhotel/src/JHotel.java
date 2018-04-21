@@ -15,6 +15,9 @@ public class JHotel
      * @param args argumen untuk main
      */
     public static void main(String[] args) {
+
+
+
         try {
             DatabaseCustomer.addCustomer(new Customer("Abi", 1997, 1, 9, "abiabi@gmail.com"));
             DatabaseCustomer.addCustomer(new Customer("Budi", 2000, 3, 4, "budi@gmail.com"));
@@ -27,11 +30,11 @@ public class JHotel
         }
 
         try {
-            Lokasi a = new Lokasi(102, 320, "Samping rumah gue");
+            //Lokasi a = new Lokasi(102, 320, "Samping rumah gue");
             DatabaseHotel.addHotel(new Hotel("Ibis", new Lokasi(3, 3, "Depan rumah gue"), 5));
             DatabaseHotel.addHotel(new Hotel("Hilton", new Lokasi(10, 10, "Belakang rumah gue"), 100));
-            DatabaseHotel.addHotel(new Hotel("Aston", a, 1));
-            DatabaseHotel.addHotel(new Hotel("Aston", a, 1));
+            DatabaseHotel.addHotel(new Hotel("Aston", new Lokasi(102, 320, "Samping rumah gue"), 1));
+            DatabaseHotel.addHotel(new Hotel("Aston", new Lokasi(102, 320, "Samping rumah gue"), 1));
         } catch(HotelSudahAdaException e){
             System.out.println("---TES HOTEL SUDAH ADA BERHASIL---");
             System.out.println(e.getPesan());

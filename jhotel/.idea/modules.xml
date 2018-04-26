@@ -3,6 +3,8 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/jhotel.iml" filepath="$PROJECT_DIR$/jhotel.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/jhotel_main.iml" filepath="$PROJECT_DIR$/.idea/modules/jhotel_main.iml" group="jhotel" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/jhotel_test.iml" filepath="$PROJECT_DIR$/.idea/modules/jhotel_test.iml" group="jhotel" />
     </modules>
   </component>
 </project>

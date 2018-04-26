@@ -41,10 +41,10 @@ public class DatabasePesanan
         return null;
     }
 
-    public static Pesanan getPesanan(Room kamar){
+    public static Pesanan getPesananAktif(Room kamar){
         for (Pesanan pesan :
                 PESANAN_DATABASE) {
-            if(kamar.equals(pesan.getRoom())==true){
+            if(kamar.equals(pesan.getRoom()) && pesan.getStatusAktif()){
                 return pesan;
             }
         }
@@ -60,6 +60,7 @@ public class DatabasePesanan
         }
         return null;
     }
+
 
     public static boolean removePesanan(Pesanan pesan) throws PesananTidakDitemukanException{
         for (Pesanan pesan2 :

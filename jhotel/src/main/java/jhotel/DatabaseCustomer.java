@@ -47,6 +47,16 @@ public class DatabaseCustomer
         }
         return null;
     }
+
+    public static Customer getCustomerLogin(String email, String password){
+        for (Customer cust :
+                CUSTOMER_DATABASE) {
+            if (cust.getEmail().compareTo(email) == 0 && cust.getPassword().compareTo(password) == 0){
+                return cust;
+            }
+        }
+        return null;
+    }
     
     /**
      * Merupakan metode yang akan digunakan pada link database

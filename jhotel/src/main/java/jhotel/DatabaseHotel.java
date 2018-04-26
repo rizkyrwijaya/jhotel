@@ -29,7 +29,7 @@ public class DatabaseHotel
     public static boolean addHotel(Hotel baru) throws HotelSudahAdaException{
         for (Hotel hotel :
                 HOTEL_DATABASE) {
-            if(hotel.getID() == baru.getID() || (hotel.getLokasi().getX() == baru.getLokasi().getX() && hotel.getLokasi().getY() == baru.getLokasi().getY() && hotel.getLokasi().getDeskripsi().compareTo(baru.getLokasi().getDeskripsi()) == 0  && hotel.getNama().compareTo(baru.getNama())==0)){
+            if(hotel.getID() == baru.getID() || ((hotel.getLokasi().getX() == baru.getLokasi().getX() && hotel.getLokasi().getY() == baru.getLokasi().getY()) && (hotel.getLokasi().getDeskripsi().compareTo(baru.getLokasi().getDeskripsi()) == 0)  && hotel.getNama().compareTo(baru.getNama())==0)){
                 throw new HotelSudahAdaException(hotel);
             }
         }

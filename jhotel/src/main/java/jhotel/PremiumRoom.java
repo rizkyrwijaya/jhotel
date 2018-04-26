@@ -8,7 +8,7 @@ package jhotel;
 public class PremiumRoom extends Room
 {
     // instance variables - replace the example below with your own
-    private static TipeKamar TIPE_KAMAR = TipeKamar.DOUBLE;
+    private static TipeKamar TIPE_KAMAR = TipeKamar.PREMIUM;
     private static double DISCOUNT = 0.3;
     
     /**

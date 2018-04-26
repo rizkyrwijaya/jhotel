@@ -23,11 +23,13 @@ public class Administrasi
      */
     public static void pesananDitugaskan(Pesanan pesan, Room kamar)
     {
-        pesan.setStatusSelesai(false);
-        pesan.setStatusDiproses(true);
-        pesan.setRoom(kamar);
-        DatabaseRoom.getRoom(kamar.getHotel(),kamar.getNomorKamar()).setStatusKamar(StatusKamar.BOOKED);
-        
+        if(kamar.getStatusKamar().equals(StatusKamar.VACANT)) {
+            pesan.setStatusSelesai(false);
+            pesan.setStatusDiproses(true);
+            pesan.setRoom(kamar);
+            DatabaseRoom.getRoom(kamar.getHotel(), kamar.getNomorKamar()).setStatusKamar(StatusKamar.BOOKED);
+        }
+        else pesan.setStatusAktif(false);
     }
 
     
@@ -36,11 +38,10 @@ public class Administrasi
      */
     public static void pesananDibatalkan(Room kamar)
     {
-        Pesanan pesan = DatabasePesanan.getPesanan(kamar);
+        Pesanan pesan = DatabasePesanan.getPesananAktif(kamar);
         if(pesan != null) {
             pesan.setStatusSelesai(false);
             pesan.setStatusDiproses(false);
-            pesan.setRoom(null);
         }
         DatabaseRoom.getRoom(kamar.getHotel(), kamar.getNomorKamar()).setStatusKamar(StatusKamar.VACANT);
         
@@ -50,11 +51,10 @@ public class Administrasi
      * Methode administratif untuk mengubah status pesanan dan status room dan unlink
      */
     public static void pesananSelesai(Room kamar) {
-        Pesanan pesan = DatabasePesanan.getPesanan(kamar);
+        Pesanan pesan = DatabasePesanan.getPesananAktif(kamar);
         if(pesan != null) {
             pesan.setStatusSelesai(true);
             pesan.setStatusDiproses(false);
-            pesan.setRoom(null);
         }
         DatabaseRoom.getRoom(kamar.getHotel(), kamar.getNomorKamar()).setStatusKamar(StatusKamar.VACANT);
     }
@@ -70,7 +70,6 @@ public class Administrasi
         pesan.setStatusSelesai(false);
         pesan.setStatusDiproses(false);
         pesan.setStatusAktif(false);
-        pesan.setRoom(null);
     }
     
     /**
@@ -84,7 +83,6 @@ public class Administrasi
         pesan.setStatusSelesai(true);
         pesan.setStatusDiproses(false);
         pesan.setStatusAktif(false);
-        pesan.setRoom(null);   
     }
     
 }

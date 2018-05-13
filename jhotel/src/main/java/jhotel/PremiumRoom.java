@@ -1,4 +1,5 @@
 package jhotel;
+
 /**
  * Merupakan subclass room
  *

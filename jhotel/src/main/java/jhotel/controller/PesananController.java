@@ -24,11 +24,11 @@ public class PesananController {
         Pesanan pesanan = new Pesanan(jumlah_hari,DatabaseCustomer.getCustomer(id_customer));
         try{
             DatabasePesanan.addPesanan(pesanan);
+            Administrasi.pesananDitugaskan(DatabasePesanan.getPesananAktif(DatabaseCustomer.getCustomer(id_customer)), DatabaseRoom.getRoom(DatabaseHotel.getHotel(id_hotel),nomor_kamar));
         } catch(Exception e){
             e.getMessage();
             return null;
         }
-        Administrasi.pesananDitugaskan(DatabasePesanan.getPesananAktif(DatabaseCustomer.getCustomer(id_customer)), DatabaseRoom.getRoom(DatabaseHotel.getHotel(id_hotel),nomor_kamar));
         return DatabasePesanan.getPesananAktif(DatabaseCustomer.getCustomer(id_customer));
     }
 

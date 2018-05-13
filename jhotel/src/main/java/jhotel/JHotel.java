@@ -14,30 +14,23 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class JHotel
 {
     public static void main(String[] args) {
-        Hotel hotel1 = new Hotel("Aston",new Lokasi(30,30,"Di Aston"),5);
-
+        Hotel hotel1 = new Hotel("Aston", new Lokasi(32,33,"Disana"),4);
         try{
             DatabaseHotel.addHotel(hotel1);
         } catch(HotelSudahAdaException e){
-            System.out.println("Hotel ada");
+
         }
 
-        Hotel hotel2 = new Hotel("Carlton",new Lokasi(50,50,"RichCarl"),5);
-        try{
-            DatabaseHotel.addHotel(hotel2);
-        } catch(HotelSudahAdaException e){
-            System.out.println("Hotel2 ada");
-        }
+        Room kamar1 = new SingleRoom(hotel1,"A11");
+        Room kamar2 = new DoubleRoom(hotel1,"B22");
+        Room kamar3 = new PremiumRoom(hotel1,"C33");
 
         try{
-            Room room1 = new SingleRoom(hotel1,"S11");
-            DatabaseRoom.addRoom(room1);
-            Room room2 = new DoubleRoom(hotel1,"D22");
-            DatabaseRoom.addRoom(room2);
-            Room room3 = new PremiumRoom(hotel2,"P33");
-            DatabaseRoom.addRoom(room3);
+            DatabaseRoom.addRoom(kamar1);
+            DatabaseRoom.addRoom(kamar2);
+            DatabaseRoom.addRoom(kamar3);
         } catch(RoomSudahAdaException e){
-            System.out.println("Ada");
+
         }
 
         SpringApplication.run(JHotel.class, args);

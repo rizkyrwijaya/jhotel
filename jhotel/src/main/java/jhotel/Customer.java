@@ -1,4 +1,8 @@
+/**
+ * jhotel is the group for the whole jhotel project
+ */
 package jhotel;
+
 /**
  * Class Customer Tugas Case Study Prak OOP
  *

@@ -10,6 +10,8 @@ import java.util.*;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
+import javax.swing.*;
+
 @SpringBootApplication
 public class JHotel
 {
@@ -32,7 +34,6 @@ public class JHotel
         } catch(RoomSudahAdaException e){
 
         }
-
         SpringApplication.run(JHotel.class, args);
     }
     

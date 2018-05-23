@@ -3,16 +3,16 @@
  */
 package jhotel;
 
-/**
- * Class Customer Tugas Case Study Prak OOP
- *
- * @author Rizky Ramadian Wijaya
- * @version 22/3/2018
- */
-
 import java.util.*;
 import java.text.*;
 
+/**
+ * Customer Class. Sebuah Class untuk jenis object Customer.
+ *
+ * @author Rizky Ramadian Wijaya
+ * @version 13/5/2018 - ver. Beta 1
+ *
+ */
 public class Customer
 {
     //Bagian disini menunjukan Variabel-variabel pada class Customer
@@ -21,8 +21,6 @@ public class Customer
     private String email;
     private Date dob;
     private String password;
-
-    
     SimpleDateFormat dobformat = new SimpleDateFormat("dd MMMMMMMMM yyyy");
     
     //Method Constructor dari Class
